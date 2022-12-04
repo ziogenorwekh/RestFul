@@ -49,9 +49,11 @@ public class MemberResource {
 //        HATEOS 사용
         EntityModel<MemberRespVo> entityModel = EntityModel.of(respVo);
 //        해당 자원에 대해 객체를 생성하고, 해당 자원의 메서드를 참조한다.
-        WebMvcLinkBuilder linkBuilder = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).retrieveAllUsers());
+        WebMvcLinkBuilder linkBuilder = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).update(id,null));
+
 //        참조 설정
-        entityModel.add(linkBuilder.withRel("all-members"));
+        entityModel.add(linkBuilder.withRel("update-member"));
+        entityModel.add(linkBuilder.withRel("delete-member"));
         return ResponseEntity.ok(entityModel);
     }
 
