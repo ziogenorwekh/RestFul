@@ -22,8 +22,9 @@ public class RestApplication {
     @PostConstruct
     public void init() {
         MemberReqVo memberReqVo = new MemberReqVo();
-        memberReqVo.setEmail("lsek@lsek.com");
-        memberReqVo.setName("lsek");
+        memberReqVo.setEmail("lauv@lsek.com");
+        memberReqVo.setName("lauv");
+        memberReqVo.setPassword("123456");
         memberService.save(memberReqVo);
     }
 }

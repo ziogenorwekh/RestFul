@@ -24,4 +24,9 @@ public class MemberReqVo {
     @ApiParam(value = "사용지 이름")
     @NotBlank(message = "빈 값은 허용되지 않습니다.")
     private String name;
+
+    @ApiModelProperty(example = "123456")
+    @ApiParam(value = "사용자 비밀번호")
+    @NotBlank(message = "빈 값은 허용되지 않습니다.")
+    private String password;
 }
